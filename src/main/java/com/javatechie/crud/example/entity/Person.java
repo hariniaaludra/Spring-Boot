@@ -7,16 +7,18 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+
 import javax.persistence.Table;
 
 import com.javatechie.crud.example.enumeration.Gender;
 import com.javatechie.crud.example.enumeration.Status;
 
 @Entity
-@Table(name = "person_TbL")
+@Table(name = "PERSON_TbL")
 public class Person {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
 	@Column(name = "LAST_NAME")
@@ -25,11 +27,13 @@ public class Person {
 	@Column(name = "FIRST_NAME")
 	private String firstname;
 	
+	
 	@Column(name = "LOCATION")
 	private String location;
 	
 	@Column(name = "NUMBER_OF_BOOK")
 	private int numberofbook;
+	
 	
 	@Column(name = "DEGREE")
 	private String degree;
@@ -41,6 +45,8 @@ public class Person {
 	private Gender gender;
 	@Column(name = "STATUS")
 	private Status status;
+	
+
 
 	public long getId() {
 		return id;
@@ -77,6 +83,8 @@ public class Person {
 	public String getLastname() {
 		return lastname;
 	}
+
+	
 
 	public void setLastname(String lastname) {
 		this.lastname = lastname;

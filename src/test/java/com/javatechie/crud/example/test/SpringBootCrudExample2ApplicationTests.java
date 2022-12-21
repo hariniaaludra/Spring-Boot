@@ -1,4 +1,4 @@
-package com.javatechie.crud.example;
+package com.javatechie.crud.example.test;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -6,7 +6,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class SpringBootCrudExample2ApplicationTests {
 
-	@Test
+	//@Test
 	void contextLoads() {
 	}
 

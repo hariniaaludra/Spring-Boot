@@ -1,27 +1,23 @@
 package com.javatechie.crud.example.model;
 
-public class PersonView {
-
+public class BookView {
 	private String id;
 
 	private String lastname;
-
 	private String firstname;
-
 	private String location;
-
 	private String numberofbook;
-
+	private String books;
 	private String degree;
-
 	private String age;
-
 	private String salary;
-
 	private String gender;
-
 	private String status;
-
+	private String name;
+	private String author;
+	private String publishon;
+	private String stock;
+	private String available;
 
 	public String getId() {
 		return id;
@@ -61,6 +57,14 @@ public class PersonView {
 
 	public void setNumberofbook(String numberofbook) {
 		this.numberofbook = numberofbook;
+	}
+
+	public String getBooks() {
+		return books;
+	}
+
+	public void setBooks(String books) {
+		this.books = books;
 	}
 
 	public String getDegree() {
@@ -103,4 +107,43 @@ public class PersonView {
 		this.status = status;
 	}
 
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+
+	public String getPublishon() {
+		return publishon;
+	}
+
+	public void setPublishon(String publishon) {
+		this.publishon = publishon;
+	}
+
+	public String getStock() {
+		return stock;
+	}
+
+	public void setStock(String stock) {
+		this.stock = stock;
+	}
+
+	public String getAvailable() {
+		return available;
+	}
+
+	public void setAvailable(String available) {
+		this.available = available;
+	}
 }
