@@ -4,7 +4,8 @@ import javax.persistence.CascadeType;
 import javax.persistence.Column;
 
 import javax.persistence.Entity;
-
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -26,6 +27,11 @@ public class Book {
 	
 	@Column(name = "NAME")
 	private String name;
+	
+	@Column(name="CODE")
+	private String code;
+
+
 
 	@OneToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
 	@JoinColumn(name = "AUTHOD_Id")
@@ -37,6 +43,7 @@ public class Book {
 	@Column(name = "STOCK")
 	private int stock;
 	
+	@Enumerated(EnumType.STRING)
 	@Column(name = "AVAILABLE")
 	private Available available;
 
@@ -74,6 +81,13 @@ public class Book {
 
 	public int getStock() {
 		return stock;
+	}
+	public String getCode() {
+		return code;
+	}
+
+	public void setCode(String code) {
+		this.code = code;
 	}
 
 	public void setStock(int stock) {

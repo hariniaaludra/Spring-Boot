@@ -34,6 +34,7 @@ public class BookMapper {
 		Book book = new Book();
 		
 		book.setName(bookview.getName());
+		book.setCode(bookview.getCode());
 		book.setAuthor(modelToEntity(bookview));
 		book.setPublishon(Integer.parseInt(bookview.getPublishon()));
 		book.setStock(Integer.parseInt(bookview.getStock()));

@@ -2,12 +2,14 @@ package com.javatechie.crud.example.test;
 
 import static org.junit.Assert.assertEquals;
 
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.InjectMocks;
 
-import org.springframework.test.context.junit4.SpringRunner;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+//import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.junit.jupiter.MockitoExtension;
+//import org.springframework.test.context.junit4.SpringRunner;
 
 import com.javatechie.crud.example.entity.Book;
 import com.javatechie.crud.example.entity.Person;
@@ -16,15 +18,15 @@ import com.javatechie.crud.example.enumeration.Status;
 import com.javatechie.crud.example.mapper.BookMapper;
 import com.javatechie.crud.example.model.BookView;
 
-@RunWith(SpringRunner.class)
-public class BookMapperTest {
+@ExtendWith(MockitoExtension.class)
+ class BookMapperTest {
 
 	@InjectMocks
 	BookMapper bookmapper;
 
 	BookView bookView = new BookView();
 
-	@Before
+	@BeforeEach
 	public void test() {
 
 		bookView.setLastname("G");
@@ -45,7 +47,7 @@ public class BookMapperTest {
 
 	@Test
 
-	public void entityToModelTest() {
+	 void entityToModelTest() {
 
 		String data = bookView.getName();
 		Book view = bookmapper.entityToModel(bookView);
@@ -53,7 +55,7 @@ public class BookMapperTest {
 	}
 
 	@Test
-	public void modelToEntity() {
+	 void modelToEntity() {
 
 		int age = Integer.valueOf(bookView.getAge());
 		Person book = bookmapper.modelToEntity(bookView);

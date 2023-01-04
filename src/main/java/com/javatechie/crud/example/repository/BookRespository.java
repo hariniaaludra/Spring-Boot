@@ -11,4 +11,8 @@ import com.javatechie.crud.example.entity.Book;
 @Repository
 public interface BookRespository extends JpaRepository<Book, Long> {
 
+	boolean existsByCode = false;
+
+	boolean existsByCode(String code);
+
 }

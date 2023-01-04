@@ -5,26 +5,28 @@ import static org.junit.Assert.assertEquals;
 import java.math.BigDecimal;
 
 
-import org.junit.runner.RunWith;
+//import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
-import org.springframework.test.context.junit4.SpringRunner;
-import org.junit.Before;
-import org.junit.Test;
+//import org.springframework.test.context.junit4.SpringRunner;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.junit.jupiter.MockitoExtension;
 import com.javatechie.crud.example.entity.Person;
 import com.javatechie.crud.example.enumeration.Gender;
 import com.javatechie.crud.example.enumeration.Status;
 import com.javatechie.crud.example.mapper.PersonMapper;
 import com.javatechie.crud.example.model.PersonView;
 
-@RunWith(SpringRunner.class)
-public class PersonMapperTest {
+@ExtendWith(MockitoExtension.class)
+class PersonMapperTest {
 
 	@InjectMocks
 	PersonMapper personmapper;
 	PersonView personview = new PersonView();
 	Person cer = new Person();
 
-	@Before
+	@BeforeEach
 	public void data() {
 		personview.setId("1");
 		personview.setFirstname("rajan");
@@ -51,7 +53,7 @@ public class PersonMapperTest {
 	}
 
 	@Test
-	public void modelToEntityTestPer() {
+	void modelToEntityTestPer() {
 
 		Person per = personmapper.modelToEntity(personview);
 		String cer = personview.getLocation();
@@ -60,7 +62,7 @@ public class PersonMapperTest {
 	}
 
 	@Test
-	public void entityToModelPer() {
+ void entityToModelPer() {
 
 		PersonView mer = personmapper.entityToModel(cer);
 		String der = cer.getDegree();

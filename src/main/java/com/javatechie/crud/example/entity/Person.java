@@ -27,7 +27,6 @@ public class Person {
 	@Column(name = "FIRST_NAME")
 	private String firstname;
 	
-	
 	@Column(name = "LOCATION")
 	private String location;
 	

@@ -7,13 +7,13 @@ public class BookView {
 	private String firstname;
 	private String location;
 	private String numberofbook;
-	private String books;
 	private String degree;
 	private String age;
 	private String salary;
 	private String gender;
 	private String status;
 	private String name;
+	private String code;
 	private String author;
 	private String publishon;
 	private String stock;
@@ -57,14 +57,6 @@ public class BookView {
 
 	public void setNumberofbook(String numberofbook) {
 		this.numberofbook = numberofbook;
-	}
-
-	public String getBooks() {
-		return books;
-	}
-
-	public void setBooks(String books) {
-		this.books = books;
 	}
 
 	public String getDegree() {
@@ -113,6 +105,14 @@ public class BookView {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public String getCode() {
+		return code;
+	}
+
+	public void setCode(String code) {
+		this.code = code;
 	}
 
 	public String getAuthor() {

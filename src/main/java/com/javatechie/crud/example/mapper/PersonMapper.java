@@ -13,15 +13,14 @@ import com.javatechie.crud.example.enumeration.Gender;
 import com.javatechie.crud.example.enumeration.Status;
 import com.javatechie.crud.example.model.PersonView;
 
-//import com.javatechie.crud.example.repository.PersonRespository;
+
 @Component
 public class PersonMapper {
 
 	public Person modelToEntity(PersonView personView) {
 		Person person1 = new Person();
-		if (personView.getId() != null) {
-			person1.setId(Integer.parseInt(personView.getId()));
-		}
+
+		person1.setId(Integer.parseInt(personView.getId()));
 		person1.setFirstname(personView.getFirstname());
 		person1.setLastname(personView.getLastname());
 		person1.setAge(Integer.parseInt(personView.getAge()));
